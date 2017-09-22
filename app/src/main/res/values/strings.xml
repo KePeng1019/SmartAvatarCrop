@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PictureCrop</string>
+    <string name="crop">Crop</string>
+    <string name="from_gallery">from_gallery</string>
+    <string name="from_camera">from_camera</string>
+</resources>

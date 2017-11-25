@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <group android:id="@+id/main_group" >
     <item android:id="@+id/from_gallery"
         android:title="@string/from_gallery" />
     <item android:id="@+id/from_camera"
         android:title="@string/from_camera" />
+
+    <item android:id="@+id/anko_layout"
+        android:title="anko_layout"
+        app:showAsAction="always" />
 </group>
 </menu>

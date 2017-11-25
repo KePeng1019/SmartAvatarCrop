@@ -10,9 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:theme="@android:style/Theme.Material.Light">
         <activity
-            android:name=".MainActivity"
+            android:name=".SuperCropActivity"
             android:label="@string/app_name"
             android:theme="@style/Base.Theme.AppCompat">
             <intent-filter>
@@ -23,9 +23,14 @@
         <activity
             android:name=".CropActivity"
             android:label="@string/crop"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Base.Theme.AppCompat"
-            android:parentActivityName=".MainActivity"/>
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".AnkoLayoutActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>

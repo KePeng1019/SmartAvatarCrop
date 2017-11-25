@@ -1,7 +1,6 @@
 package com.picture.crop
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
@@ -16,6 +15,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
 import java.io.File
 
 class MainActivity : AppCompatActivity() {
@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
                 fromGallery()
                 return true
             }
+
+            R.id.anko_layout -> {
+                startActivity<AnkoLayoutActivity>()
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -64,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 ToCrop(Uri.fromFile(pictureTokenFile))
             }
 
-            CropActivity.CROP_CODE -> { 
+            CropActivity.CROP_CODE -> {
                 cropped_image.setImageBitmap(BitmapFactory.decodeStream(contentResolver.openInputStream(data?.data)))
             }
         }

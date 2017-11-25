@@ -1,15 +1,17 @@
 # SmartAvatarCrop
-this is an android project write in kotlin which can smart crop picture on moving and scale, like WeChat
-# Example
-you can crop picture by scale or scroll like this
-![picture crop](https://github.com/KePeng1019/SmartAvatarCrop/blob/master/example/Screenshot_2017-09-23-00-13-44-830_com.picture.crop.png)
-
-![picture crop](https://github.com/KePeng1019/SmartAvatarCrop/blob/master/example/Screenshot_2017-09-23-00-13-55-690_com.picture.crop.png
-)
-
-![picture crop](https://github.com/KePeng1019/SmartAvatarCrop/blob/master/example/Screenshot_2017-09-23-00-16-00-063_com.picture.crop.png
-)
-
-![picture crop](https://github.com/KePeng1019/SmartAvatarCrop/blob/master/example/Screenshot_2017-09-23-00-16-08-001_com.picture.crop.png)
-#Addtion
-hope you like it
+android project write in kotlin, pure kotlin code support picture scale, translation, mirror and then crop certain area, because all this enabled by androdi matrix and canvas, so crop is really fast more implementable to your project.
+# Start
+works are down by SquareCropView, in your activity ,just add this view to your layout access it in your activity code.
+//start crop by set your bitmap resource.
+squareCropView.startCropProcess(yourBitmap)
+then you can scale or translate picture shows on screen, picture will never scroll out of 
+the rectangle.
+//rotate picture by certain degree clockwise
+squareCropView.rotate(degree)
+//mirror picture horizontal
+squareCropView.flip()
+//apply crop, after all option you set to this picture, return crop result
+squareCropView.applyCrop()
+# Conclusion
+Try it and be pleasant with this small sample project,or you can do anything to benefit yourself.
+Any suggestion is wellcome.
